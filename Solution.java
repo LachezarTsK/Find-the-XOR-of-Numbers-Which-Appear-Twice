@@ -6,6 +6,7 @@ public class Solution {
     public int duplicateNumbersXOR(int[] input) {
         int[] frequency = new int[RANGE_OF_VALUES[1] + 1];
         int xorDuplicates = 0;
+        
         for (int value : input) {
             if (++frequency[value] == 2) {
                 xorDuplicates ^= value;
